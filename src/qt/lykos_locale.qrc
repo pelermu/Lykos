@@ -1,0 +1,28 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/lykos_bg.qm</file>
+        <file alias="ca">locale/lykos_ca.qm</file>
+        <file alias="cs">locale/lykos_cs.qm</file>
+        <file alias="da">locale/lykos_da.qm</file>
+        <file alias="de">locale/lykos_de.qm</file>
+        <file alias="en">locale/lykos_en.qm</file>
+        <file alias="en_US">locale/lykos_en_US.qm</file>
+        <file alias="es">locale/lykos_es.qm</file>
+        <file alias="fi">locale/lykos_fi.qm</file>
+        <file alias="fr_FR">locale/lykos_fr_FR.qm</file>
+        <file alias="it">locale/lykos_it.qm</file>
+        <file alias="ja">locale/lykos_ja.qm</file>
+        <file alias="ko_KR">locale/lykos_ko_KR.qm</file>
+        <file alias="nl">locale/lykos_nl.qm</file>
+        <file alias="pl">locale/lykos_pl.qm</file>
+        <file alias="pt">locale/lykos_pt.qm</file>
+        <file alias="pt_BR">locale/lykos_pt_BR.qm</file>
+        <file alias="ro_RO">locale/lykos_ro_RO.qm</file>
+        <file alias="ru">locale/lykos_ru.qm</file>
+        <file alias="sk">locale/lykos_sk.qm</file>
+        <file alias="sv">locale/lykos_sv.qm</file>
+        <file alias="uk">locale/lykos_uk.qm</file>
+        <file alias="zh_CN">locale/lykos_zh_CN.qm</file>
+        <file alias="zh_TW">locale/lykos_zh_TW.qm</file>
+    </qresource>
+</RCC>

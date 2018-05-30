@@ -1,0 +1,26 @@
+[Unit]
+Description=LYKOS's distributed currency daemon
+After=network.target
+
+[Service]
+User=lykos
+Group=lykos
+
+Type=forking
+PIDFile=/var/lib/lykosd/lykosd.pid
+
+ExecStart=/usr/bin/lykosd -daemon -pid=/var/lib/lykosd/lykosd.pid \
+          -conf=/etc/lykos/lykos.conf -datadir=/var/lib/lykosd
+
+ExecStop=-/usr/bin/lykos-cli -conf=/etc/lykos/lykos.conf \
+         -datadir=/var/lib/lykosd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

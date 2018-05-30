@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Lykos
+Comment=Lykos P2P Cryptocurrency
+Comment[fr]=Lykos, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Lykos, eşten eşe kriptografik sanal para birimi
+Exec=lykos-qt %u
+Terminal=false
+Type=Application
+Icon=lykos128
+MimeType=x-scheme-handler/lykos;
+Categories=Office;Finance;
