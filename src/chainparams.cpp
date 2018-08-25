@@ -54,8 +54,8 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x00000423881ee219237a9b9efa35d0765f54e64072c206d1b74d8cdc76eac785"))
-    (2, uint256("00000cd61fb51ae78785d2bfa6022ac5f3111f45a5be03c1dad4388841f8c8af")); // etc
+    (0, uint256(""))
+    (2, uint256("")); // etc
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
     1519515449, // * UNIX timestamp of last checkpoint block
@@ -96,7 +96,7 @@ public:
         pchMessageStart[1] = 0x3c;
         pchMessageStart[2] = 0xc2;
         pchMessageStart[3] = 0xe1;
-        vAlertPubKey = ParseHex("04f993197017359c7b735562dd2dc616f6a25fe5b556e8fbedef5dad93417e05fe24f6e4a8a1c668aa0aa84f1e161cfcaf595cdf7bc4ee49f57827eb1b651a03d5");
+        vAlertPubKey = ParseHex("048e7768d69568eb5538190bbfa3269fc3ff3bc3cf9005a098380219949db009e622e0047a904233d85c0c58b4bc7f9e491c7187eb7baa41d078e9674b947897d7");
         nDefaultPort = 32123;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // FIX starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -119,21 +119,21 @@ public:
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 486604799 << CScriptNum(4) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
         txNew.vout[0].nValue = 50 * COIN;
-        txNew.vout[0].scriptPubKey = CScript() << ParseHex("04906a5c94b242c6db32e6644e1060dfb76aafa5c19531d49f4258c9f5340d0988469223de4503afec8ad5b974c5fc9f1de22f3a0068dad8f3fc9824b419afb524") << OP_CHECKSIG;
+        txNew.vout[0].scriptPubKey = CScript() << ParseHex("0486bce1bac0d543f104cbff2bd23680056a3b9ea05e1137d2ff90eeb5e08472eb500322593a2cb06fbf8297d7beb6cd30cb90f98153b5b7cce1493749e41e0284") << OP_CHECKSIG;
         genesis.vtx.push_back(txNew);
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime = 1527626253;
+        genesis.nTime = 1535220463;
         genesis.nBits = 0x1e0ffff0;
-        genesis.nNonce = 676975;
+        genesis.nNonce = 20667006;
 
         hashGenesisBlock = genesis.GetHash();
 
-        assert(hashGenesisBlock == uint256("0x00000423881ee219237a9b9efa35d0765f54e64072c206d1b74d8cdc76eac785"));
-        assert(genesis.hashMerkleRoot == uint256("0x287a86279d3205d10f849340606c1d537ecfa60ad497bb92c60f33c8ba6afd5b"));
+        assert(hashGenesisBlock == uint256("0x00000271adadf177be10659a65fd1b25c152c3aa4ea599c141cbc6118d9a6eed"));
+        assert(genesis.hashMerkleRoot == uint256("0x7ec6e686a721f26c1282f546e67496c2550970ab51c6185730397db3479d285b"));
 
-        vSeeds.push_back(CDNSSeedData("lykos seed 1", "66.70.188.93"));
+        vSeeds.push_back(CDNSSeedData("lykos seed 1", "45.32.126.58"));
         vSeeds.push_back(CDNSSeedData("lykos seed 2", "66.70.188.54"));
         vSeeds.push_back(CDNSSeedData("lykos seed 3", "149.56.143.239"));
 
